@@ -1,27 +1,25 @@
 import './App.css';
 
 import Navbar from "./components/Navbar"
+import TweetForm from "./components/TweetForm"
+import Tweet from "./components/Tweet"
+
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <div className="App-mid">
-        <div className="page-heading">
+        <div className="page-header">
           <h2>Home</h2>
+          <form className="search-form">
+            <button><span class="material-icons">search</span></button>
+            <input type="text" placeholder="Search" />
+          </form>
         </div>
-        <form className="tweet-form">
-          <div className="tweet-left">
-            <img src="dinh.jpg" />
-          </div>
-          <div className="tweet-right">
-            <textarea placeholder="What's happening?" />
-            <div className="tweet-right-bot">
-              <span class="material-icons nav-link">image</span>
-              <button>Tweet</button>
-            </div>
-          </div>
-        </form>
+        <TweetForm />
+        <div className="spacer"></div>
+        <Tweet />
       </div>
     </div>
   );
